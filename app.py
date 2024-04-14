@@ -136,10 +136,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
 
             st.markdown(f"""<h5 style = 'text-align: center; height: 300px; object-fit: contain;'> {df_image} </h5>""", unsafe_allow_html=True)
         
-        # Text-to-speech functionality
-        tts_text = f"The best crop to plant is {rdf_predicted_value[0]}"
-        components.iframe(f"https://responsivevoice.org/text-to-speech-demo/?text={tts_text}&voice=UK%20English%20Male", width=400, height=300)
-
+        
 # Fertilizer recommendation page
 if 'page' in st.session_state and st.session_state['page'] == 'fertilizer_recommendation':
     # Add your fertilizer recommendation code here
