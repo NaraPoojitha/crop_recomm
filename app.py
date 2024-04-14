@@ -12,12 +12,6 @@ from joblib import Parallel, delayed
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Set page config first
-st.set_page_config(
-    page_title="AI-ML Decision System for Effective Farming",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 
 # Home page
 if 'page' not in st.session_state:
@@ -38,23 +32,7 @@ else:
     st.session_state['page'] = 'home'
 
 
-# Define language options
-languages = {
-    'English': 'en',
-    'Polish': 'pl',
-    'German': 'de'
-}
 
-# Create a dropdown for language selection
-selected_language = st.selectbox('Select language:', list(languages.keys()))
-
-# Display translated text based on selected language
-if selected_language == 'English':
-    st.write("Hello! Welcome to the English version.")
-elif selected_language == 'Polish':
-    st.write("Witaj! Witamy w polskiej wersji.")
-elif selected_language == 'German':
-    st.write("Hallo! Willkommen zur deutschen Version.")
 
 # Home page
 if st.session_state['page'] == 'home':
